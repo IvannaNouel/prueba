@@ -16,9 +16,9 @@ Clona el repositorio y navega hasta el directorio del proyecto.
 
 ### Installar
 
-npm install
+- npm install
 
 ### Ejecutar
 
-npm test
+- npm test
 
