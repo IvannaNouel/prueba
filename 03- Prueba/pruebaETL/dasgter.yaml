@@ -1,0 +1,10 @@
+run_storage:
+ module: dagster_mysql.run_storage
+ class: MySQLRunStorage
+ config:
+  mysql_db:
+   username: "root"
+   password: "root"
+   hostname: "localhost"
+   db_name: "pruebaETL"
+   port: 3306

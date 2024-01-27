@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+pruebaETL/__init__.py
+pruebaETL/assets.py
+pruebaETL.egg-info/PKG-INFO
+pruebaETL.egg-info/SOURCES.txt
+pruebaETL.egg-info/dependency_links.txt
+pruebaETL.egg-info/requires.txt
+pruebaETL.egg-info/top_level.txt
