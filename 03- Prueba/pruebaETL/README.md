@@ -46,11 +46,11 @@ The easiest way to deploy your Dagster project is to use Dagster Cloud.
 
 Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
 
+## idea de como debería ir el archivo read_excel:
 
-//idea de como debería ir el archivo read_excel:
-import pandas as pd
-
-def read_excel_file(file_path):
+    import pandas as pd
+    
+    def read_excel_file(file_path):
     excel_data = pd.ExcelFile(file_path)
     matrix_df = pd.read_excel(excel_data, sheet_name='Matriz de adyacencia', header=1, index_col=1).iloc[1:, 1:]
     actors_df = pd.read_excel(excel_data, sheet_name='Lista de actores', header=3).iloc[:, :3].dropna()
