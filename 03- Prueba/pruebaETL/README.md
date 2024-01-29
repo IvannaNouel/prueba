@@ -45,3 +45,27 @@ Once your Dagster Daemon is running, you can start turning on schedules and sens
 The easiest way to deploy your Dagster project is to use Dagster Cloud.
 
 Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
+
+
+//idea de como debería ir el archivo read_excel:
+import pandas as pd
+
+def read_excel_file(file_path):
+    excel_data = pd.ExcelFile(file_path)
+    matrix_df = pd.read_excel(excel_data, sheet_name='Matriz de adyacencia', header=1, index_col=1).iloc[1:, 1:]
+    actors_df = pd.read_excel(excel_data, sheet_name='Lista de actores', header=3).iloc[:, :3].dropna()
+
+    letter_to_name = dict(zip(actors_df.iloc[:, 0], actors_df.iloc[:, 2]))
+
+    relation_pairs = []
+    for i in matrix_df.index:
+        for j in matrix_df.columns:
+            if matrix_df.loc[i, j] == 1:
+                person1 = letter_to_name.get(i)
+                person2 = letter_to_name.get(j)
+                relation_pairs.append([person1, person2, 1])
+
+    final_df = pd.DataFrame(relation_pairs, columns=['person1', 'person2', 'relation'])
+
+    return final_df
+
