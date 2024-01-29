@@ -69,3 +69,6 @@ Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn
 
     return final_df
 
+## link al colab de prueba:
+    https://colab.research.google.com/drive/1pLK1BjLgHi2cRIheBHQhI6BqXDs-9Z-l?usp=sharing
+
